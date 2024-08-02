@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="html" href="nxt.html">
+
+    <title>confession</title>
+</head>
+<body>
+    
+  <!-- Header Text -->
+
+    <div class="container">
+       <h1 class="header_text">Do you wanna go out with me?</h1>
+      
+      <!-- GIF Cute Pleasee -->
+      
+        <img src="https://media1.tenor.com/m/yEg23XVd13EAAAAC/credits-to-milkmochabear-milk-and-mocha.gif" style="border-radius: 50%; height: 26rem;border: 2px solid rgb(0, 0, 0);padding: 5px;">
+    
+      <!-- Yes No Button -->
+      
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yessss...!!!</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+
+        <script>
+          function nextPage() {
+            window.location.href = "nxt.html";
+          }
+
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
